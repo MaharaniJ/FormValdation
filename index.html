@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+    <h1 id="title">Form Validation</h1>
+    <p  id="description"></p>
+    
+    <div class="container" style="width:40%; margin-left:30%; padding:2%; border: 1px solid lightgrey">
+    <form id="form">
+    <div class="input-group flex-nowrap">
+            <div class="input-group-prepend mb-3 mx-4">
+           <label for="firstname">FirstName</label>
+        </div>
+        <input id='first-name' type="text" class="form-control" placeholder="Firstname" aria-label="Username" aria-describedby="addon-wrapping" required>
+        </div>   
+        
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend mb-3 mx-4">
+              <label for="lastname">LastName</label>
+            </div>
+            <input id='last-name' type="text" class="form-control" placeholder="Lastname" aria-label="Username" aria-describedby="addon-wrapping" required>
+        </div>   
+      </form>  
+         <div class="input-group flex-nowrap">
+            <div class="input-group-prepend mb-3 mx-4">
+              <label for="address" id="labeladj">Address</label>
+            </div>
+            <input id="address" type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>   
+
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend mb-3 mx-4">
+              <label for="pincode" id="labeladj">PinCode</label>
+            </div>
+            <input id="pincode" type="text" class="form-control" placeholder="PinCode" aria-label="Username" aria-describedby="addon-wrapping" required>
+        </div>  
+        
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend mb-1 mx-4">
+              <label for="Gender">Gender</label>
+             </div>
+          </div>       
+       
+        <div class="form-check" mx-2 style="padding: 2% 0% 2% 30%">
+
+              <input class="form-check-input" type="radio" name="exampleRadios" id="male" value="male" checked>
+              <label class="form-check-label" for="male">
+                Male
+              </label>
+            </div>
+         <div class="form-check" mx-2 style="padding: 2% 0% 2% 30%">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="female" value="female">
+              <label class="form-check-label" for="female">
+                Female
+              </label>
+        </div>
+
+        <div class="input-group flex-nowrap">
+          <div class="input-group-prepend mb-1 mx-4">
+          <label for="foodItems">Food Choices</label>
+          </div>
+          </div>      
+          <!-- //style="padding: 2% 0% 2% 5%" -->
+          <div class="form-check form-check-inline" mx-3 style="wrap" >
+            <input class="form-check-input" type="checkbox" name="foodItems"  value="Pizza">
+            <label class="form-check-label" for="inlineCheckbox1">Pizza</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="foodItems"  value="Burger">
+            <label class="form-check-label" for="inlineCheckbox2">Burger</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="foodItems"  value="SpringRoll">
+            <label class="form-check-label" for="inlineCheckbox3">SpringRoll</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="foodItems" value="Bread">
+            <label class="form-check-label" for="inlineCheckbox5">Bread</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="foodItems" value="Waffles">
+            <label class="form-check-label" for="inlineCheckbox5">Waffles</label>
+          </div>
+          <br><br>
+
+          <div class="input-group flex-nowrap">
+            <div class="input-group-prepend mb-3 mx-4">
+            <label for="state" id="labeladj">State</label>
+          </div>
+          <input type="text" class="form-control" id="state" placeholder="State" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>   
+
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend mb-3 mx-4">
+            <label for="country" id="labeladj">Country</label>
+            </div>
+            <input type="text" class="form-control" id="country" placeholder="Country" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>   
+         
+        <button id="submit" style="margin-left:40%" type="submit" class="btn btn-primary mt-3" onclick="submitButton()">Submit</button>  
+        </div> 
+      
+        <table id="formTable" class="table mt-5">
+            <thead>
+              <tr>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Address</th>
+                <th scope="col">PinCode</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Food</th>
+                <th scope="col">State</th>
+                <th scope="col">Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- form Entry records will be displayed here -->
+            </tbody>
+          </table>
+</body>
+</html>
